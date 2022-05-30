@@ -6,7 +6,7 @@ import csv
 start_date = '02.12.2021' #input("Input date of start ")
 start_hour = '10:15:00' #input("Input hour of start ")
 end_hour = '10:16:00' #input("Input hour of end ")
-start_date = start_date[:6]+start_date[8:] # coonverting 02.12.2021 to 02.21.21 format
+start_date = start_date[:6]+start_date[8:] # converting 02.12.2021 to 02.21.21 format
 path = r"C:\Users\Lenovo\Kolo naukowe\Dane1.csv"
 
 def get_sec(time_str):
