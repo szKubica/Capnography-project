@@ -35,13 +35,11 @@ with open(path) as df:
             print(row, line_number)
             i = line_number
 
-    survey_start = get_sec(accurate_row[6])
-    frequency = int(accurate_row[4])
+survey_start = get_sec(accurate_row[6])
+frequency = int(accurate_row[4])
+graph_start_row = i+(get_sec(start_hour)-get_sec(accurate_row[6]))*frequency
+graph_end_row = graph_start_row + (get_sec(end_hour)-get_sec(start_hour))*frequency
 
-    print(survey_start, frequency, 'Line number', i)
 
-    graph_start_row = i+(get_sec(start_hour)-get_sec(accurate_row[6]))*frequency
-    graph_end_row = graph_start_row + (get_sec(end_hour)-get_sec(start_hour))*frequency
-    print(graph_start_row)
-    print(graph_end_row)
+if __name__ == "__main__":
     grap_drawer(graph_end_row, graph_start_row, path)
